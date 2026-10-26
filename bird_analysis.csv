@@ -1,0 +1,58 @@
+﻿image_name;predicted_species;confidence;analysis_date;description;scientific_name;family;audio_name;audio_predicted_species;audio_confidence
+bird_02_eagle.jpg;MALACHITE KINGFISHER;0.9204;2026-10-26 16:21:13;Рибалочка малахітовий (Порівняння: Розбіжність: фотографія та аудіозапис належать до різних видів);Corythornis cristatus;Рибалочкові (Alcedinidae);sample_tinamou_whistle.wav;White-bellied Nothura;0.1481
+bird_01_parrot.jpg;ALEXANDRINE PARAKEET;0.9173;2026-10-26 16:21:13;Папуга александрійський (Порівняння: Розбіжність: фотографія та аудіозапис належать до різних видів);Psittacula eupatria;Папугові (Psittacidae);sample_chachalaca_call.wav;White-bellied Nothura;0.1592
+robin.jpg;AMERICAN ROBIN;0.9933;2026-10-26 16:21:12;Дрізд мандрівний (Turdus migratorius);Turdus migratorius;Дроздові (Turdidae);;;0.0
+bird_16_crow.jpg;KING VULTURE;0.7723;2026-10-26 16:21:12;Королівський гриф (Sarcoramphus papa);Sarcoramphus papa;Американські грифи (Cathartidae);;;0.0
+bird_15_swan.jpg;CLARKS GREBE;0.1209;2026-10-26 16:21:12;Норець Кларка (Aechmophorus clarkii);Aechmophorus clarkii;Пірникозові (Podicipedidae);;;0.0
+bird_14_woodpecker.jpg;PEACOCK;0.1181;2026-10-26 16:21:12;Павич звичайний (Pavo cristatus);Pavo cristatus;Фазанові (Phasianidae);;;0.0
+bird_13_hummingbird.jpg;BLACK THROATED WARBLER;0.121;2026-10-26 16:21:12;Пісняр чорногорлий (Setophaga virens);Setophaga virens;Піснярові (Parulidae);;;0.0
+bird_12_falcon.jpg;OCELLATED TURKEY;0.6927;2026-10-26 16:21:12;Індичка плямиста (Meleagris ocellata);Meleagris ocellata;Фазанові (Phasianidae);;;0.0
+bird_11_robin.jpg;HARPY EAGLE;0.2163;2026-10-26 16:21:11;Гарпія велика (Harpia harpyja);Harpia harpyja;Яструбові (Accipitridae);;;0.0
+bird_10_pelican.jpg;WILD TURKEY;0.0404;2026-10-26 16:21:11;Дика індичка (Meleagris gallopavo);Meleagris gallopavo;Фазанові (Phasianidae);;;0.0
+bird_09_toucan.jpg;GREAT GRAY OWL;0.1181;2026-10-26 16:21:11;Сова бородата (Strix nebulosa);Strix nebulosa;Совові (Strigidae);;;0.0
+bird_08_puffin.jpg;BLUE GROSBEAK;0.395;2026-10-26 16:21:11;Скрипалик синій (Passerina caerulea);Passerina caerulea;Кардиналові (Cardinalidae);;;0.0
+bird_07_kingfisher.jpg;LONG-EARED OWL;0.1337;2026-10-26 16:21:11;Сова вухата (Asio otus);Asio otus;Совові (Strigidae);;;0.0
+bird_06_flamingo.jpg;ANTILLEAN EUPHONIA;0.5633;2026-10-26 16:21:11;Органіст антильський (Euphonia musica);Euphonia musica;В'юркові (Fringillidae);;;0.0
+bird_05_sparrow.jpg;JANDAYA PARAKEET;0.8456;2026-10-26 16:21:11;Аратинга єндайя (Aratinga jandaya);Aratinga jandaya;Папугові (Psittacidae);;;0.0
+bird_04_owl.jpg;TIT MOUSE;0.2976;2026-10-26 16:21:11;Синиця гострочуба (Baeolophus bicolor);Baeolophus bicolor;Синицеві (Paridae);;;0.0
+bird_03_duck.jpg;BAR-TAILED GODWIT;0.2643;2026-10-26 16:21:11;Грицик малий (Limosa lapponica);Limosa lapponica;Баранцеві (Scolopacidae);;;0.0
+bird_02_eagle.jpg;MALACHITE KINGFISHER;0.9204;2026-10-26 16:21:11;Рибалочка малахітовий (Corythornis cristatus);Corythornis cristatus;Рибалочкові (Alcedinidae);;;0.0
+bird_01_parrot.jpg;ALEXANDRINE PARAKEET;0.9173;2026-10-26 16:21:11;Папуга александрійський (Psittacula eupatria);Psittacula eupatria;Папугові (Psittacidae);;;0.0
+bird_02_eagle.jpg;MALACHITE KINGFISHER;0.9204;2026-10-26 16:16:03;Рибалочка малахітовий (Порівняння: Розбіжність: фотографія та аудіозапис належать до різних видів);Corythornis cristatus;Рибалочкові (Alcedinidae);sample_tinamou_whistle.wav;White-bellied Nothura;0.1481
+bird_01_parrot.jpg;ALEXANDRINE PARAKEET;0.9173;2026-10-26 16:16:03;Папуга александрійський (Порівняння: Розбіжність: фотографія та аудіозапис належать до різних видів);Psittacula eupatria;Папугові (Psittacidae);sample_chachalaca_call.wav;White-bellied Nothura;0.1592
+robin.jpg;AMERICAN ROBIN;0.9933;2026-10-26 16:16:02;Дрізд мандрівний (Turdus migratorius);Turdus migratorius;Дроздові (Turdidae);;;0.0
+bird_16_crow.jpg;KING VULTURE;0.7723;2026-10-26 16:16:02;Королівський гриф (Sarcoramphus papa);Sarcoramphus papa;Американські грифи (Cathartidae);;;0.0
+bird_15_swan.jpg;CLARKS GREBE;0.1209;2026-10-26 16:16:02;Норець Кларка (Aechmophorus clarkii);Aechmophorus clarkii;Пірникозові (Podicipedidae);;;0.0
+bird_14_woodpecker.jpg;PEACOCK;0.1181;2026-10-26 16:16:02;Павич звичайний (Pavo cristatus);Pavo cristatus;Фазанові (Phasianidae);;;0.0
+bird_13_hummingbird.jpg;BLACK THROATED WARBLER;0.121;2026-10-26 16:16:02;Пісняр чорногорлий (Setophaga virens);Setophaga virens;Піснярові (Parulidae);;;0.0
+bird_12_falcon.jpg;OCELLATED TURKEY;0.6927;2026-10-26 16:16:02;Індичка плямиста (Meleagris ocellata);Meleagris ocellata;Фазанові (Phasianidae);;;0.0
+bird_11_robin.jpg;HARPY EAGLE;0.2163;2026-10-26 16:16:01;Гарпія велика (Harpia harpyja);Harpia harpyja;Яструбові (Accipitridae);;;0.0
+bird_10_pelican.jpg;WILD TURKEY;0.0404;2026-10-26 16:16:01;Дика індичка (Meleagris gallopavo);Meleagris gallopavo;Фазанові (Phasianidae);;;0.0
+bird_09_toucan.jpg;GREAT GRAY OWL;0.1181;2026-10-26 16:16:01;Сова бородата (Strix nebulosa);Strix nebulosa;Совові (Strigidae);;;0.0
+bird_08_puffin.jpg;BLUE GROSBEAK;0.395;2026-10-26 16:16:01;Скрипалик синій (Passerina caerulea);Passerina caerulea;Кардиналові (Cardinalidae);;;0.0
+bird_07_kingfisher.jpg;LONG-EARED OWL;0.1337;2026-10-26 16:16:01;Сова вухата (Asio otus);Asio otus;Совові (Strigidae);;;0.0
+bird_06_flamingo.jpg;ANTILLEAN EUPHONIA;0.5633;2026-10-26 16:16:01;Органіст антильський (Euphonia musica);Euphonia musica;В'юркові (Fringillidae);;;0.0
+bird_05_sparrow.jpg;JANDAYA PARAKEET;0.8456;2026-10-26 16:16:01;Аратинга єндайя (Aratinga jandaya);Aratinga jandaya;Папугові (Psittacidae);;;0.0
+bird_04_owl.jpg;TIT MOUSE;0.2976;2026-10-26 16:16:01;Синиця гострочуба (Baeolophus bicolor);Baeolophus bicolor;Синицеві (Paridae);;;0.0
+bird_03_duck.jpg;BAR-TAILED GODWIT;0.2643;2026-10-26 16:16:01;Грицик малий (Limosa lapponica);Limosa lapponica;Баранцеві (Scolopacidae);;;0.0
+bird_02_eagle.jpg;MALACHITE KINGFISHER;0.9204;2026-10-26 16:16:01;Рибалочка малахітовий (Corythornis cristatus);Corythornis cristatus;Рибалочкові (Alcedinidae);;;0.0
+bird_01_parrot.jpg;ALEXANDRINE PARAKEET;0.9173;2026-10-26 16:16:01;Папуга александрійський (Psittacula eupatria);Psittacula eupatria;Папугові (Psittacidae);;;0.0
+bird_02_eagle.jpg;MALACHITE KINGFISHER;0.9204;2026-10-26 16:14:25;Рибалочка малахітовий (Порівняння: Розбіжність: фотографія та аудіозапис належать до різних видів);Corythornis cristatus;Рибалочкові (Alcedinidae);sample_tinamou_whistle.wav;White-bellied Nothura;0.1481
+bird_01_parrot.jpg;ALEXANDRINE PARAKEET;0.9173;2026-10-26 16:14:25;Папуга александрійський (Порівняння: Розбіжність: фотографія та аудіозапис належать до різних видів);Psittacula eupatria;Папугові (Psittacidae);sample_chachalaca_call.wav;White-bellied Nothura;0.1592
+robin.jpg;AMERICAN ROBIN;0.9933;2026-10-26 16:14:24;Дрізд мандрівний (Turdus migratorius);Turdus migratorius;Дроздові (Turdidae);;;0.0
+bird_16_crow.jpg;KING VULTURE;0.7723;2026-10-26 16:14:24;Королівський гриф (Sarcoramphus papa);Sarcoramphus papa;Американські грифи (Cathartidae);;;0.0
+bird_15_swan.jpg;CLARKS GREBE;0.1209;2026-10-26 16:14:24;Норець Кларка (Aechmophorus clarkii);Aechmophorus clarkii;Пірникозові (Podicipedidae);;;0.0
+bird_14_woodpecker.jpg;PEACOCK;0.1181;2026-10-26 16:14:24;Павич звичайний (Pavo cristatus);Pavo cristatus;Фазанові (Phasianidae);;;0.0
+bird_13_hummingbird.jpg;BLACK THROATED WARBLER;0.121;2026-10-26 16:14:24;Пісняр чорногорлий (Setophaga virens);Setophaga virens;Піснярові (Parulidae);;;0.0
+bird_12_falcon.jpg;OCELLATED TURKEY;0.6927;2026-10-26 16:14:23;Індичка плямиста (Meleagris ocellata);Meleagris ocellata;Фазанові (Phasianidae);;;0.0
+bird_11_robin.jpg;HARPY EAGLE;0.2163;2026-10-26 16:14:23;Гарпія велика (Harpia harpyja);Harpia harpyja;Яструбові (Accipitridae);;;0.0
+bird_10_pelican.jpg;WILD TURKEY;0.0404;2026-10-26 16:14:23;Дика індичка (Meleagris gallopavo);Meleagris gallopavo;Фазанові (Phasianidae);;;0.0
+bird_09_toucan.jpg;GREAT GRAY OWL;0.1181;2026-10-26 16:14:23;Сова бородата (Strix nebulosa);Strix nebulosa;Совові (Strigidae);;;0.0
+bird_08_puffin.jpg;BLUE GROSBEAK;0.395;2026-10-26 16:14:23;Скрипалик синій (Passerina caerulea);Passerina caerulea;Кардиналові (Cardinalidae);;;0.0
+bird_07_kingfisher.jpg;LONG-EARED OWL;0.1337;2026-10-26 16:14:23;Сова вухата (Asio otus);Asio otus;Совові (Strigidae);;;0.0
+bird_06_flamingo.jpg;ANTILLEAN EUPHONIA;0.5633;2026-10-26 16:14:23;Органіст антильський (Euphonia musica);Euphonia musica;В'юркові (Fringillidae);;;0.0
+bird_05_sparrow.jpg;JANDAYA PARAKEET;0.8456;2026-10-26 16:14:23;Аратинга єндайя (Aratinga jandaya);Aratinga jandaya;Папугові (Psittacidae);;;0.0
+bird_04_owl.jpg;TIT MOUSE;0.2976;2026-10-26 16:14:23;Синиця гострочуба (Baeolophus bicolor);Baeolophus bicolor;Синицеві (Paridae);;;0.0
+bird_03_duck.jpg;BAR-TAILED GODWIT;0.2643;2026-10-26 16:14:23;Грицик малий (Limosa lapponica);Limosa lapponica;Баранцеві (Scolopacidae);;;0.0
+bird_02_eagle.jpg;MALACHITE KINGFISHER;0.9204;2026-10-26 16:14:23;Рибалочка малахітовий (Corythornis cristatus);Corythornis cristatus;Рибалочкові (Alcedinidae);;;0.0
+bird_01_parrot.jpg;ALEXANDRINE PARAKEET;0.9173;2026-10-26 16:14:23;Папуга александрійський (Psittacula eupatria);Psittacula eupatria;Папугові (Psittacidae);;;0.0
