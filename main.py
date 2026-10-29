@@ -11,7 +11,7 @@ def main():
         from batch_runner import BatchRunner
         runner = BatchRunner()
         summary = runner.run_full_pipeline()
-        print("Пакетний аналіз успішно завершено.")
+        print("Пакетний аналіз успішно завершено")
         print(f"Кількість записів у базі даних: {summary['total_records']}")
         print(f"CSV збережено у: {summary['csv_path']}")
         print(f"Графік збережено у: {summary['chart_path']}")

@@ -27,13 +27,13 @@ class BirdImageClassifier:
                 if not path.exists():
                     raise FileNotFoundError(f"Файл не знайдено: {path}")
                 if path.suffix.lower() not in [".jpg", ".jpeg", ".png"]:
-                    raise ValueError("Непідтримуваний формат зображення. Дозволені: JPG, JPEG, PNG.")
+                    raise ValueError("Непідтримуваний формат зображення. Дозволені: JPG, JPEG, PNG")
                 file_name = path.name
                 opened_image = Image.open(path).convert("RGB")
             elif isinstance(image_input, Image.Image):
                 opened_image = image_input.convert("RGB")
             else:
-                raise TypeError("Некоректний тип вхідних даних для зображення.")
+                raise TypeError("Некоректний тип вхідних даних для зображення")
 
             raw_results = self._pipe(opened_image, top_k=top_k)
             formatted_results: List[Dict[str, Any]] = []

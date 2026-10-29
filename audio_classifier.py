@@ -2,6 +2,8 @@ from pathlib import Path
 from typing import List, Dict, Any, Union
 import numpy as np
 import soundfile as sf
+import av
+import io
 from transformers import pipeline
 import config
 
@@ -25,13 +27,38 @@ class BirdAudioClassifier:
             if not path.exists():
                 raise FileNotFoundError(f"Аудіофайл не знайдено: {path}")
 
-            allowed_extensions = [".wav", ".flac", ".ogg"]
+            allowed_extensions = [".wav", ".flac", ".ogg", ".mp3", ".m4a", ".aac"]
             if path.suffix.lower() not in allowed_extensions:
                 raise ValueError(f"Непідтримуваний формат. Дозволені: {', '.join(allowed_extensions)}")
 
-            audio_data, sample_rate = sf.read(str(path))
-            if audio_data.ndim > 1:
-                audio_data = np.mean(audio_data, axis=1)
+            ext = path.suffix.lower()
+            if ext in [".m4a", ".mp3", ".aac"]:
+                container = av.open(str(path))
+                stream = container.streams.audio[0]
+                frames = []
+                for frame in container.decode(stream):
+                    arr = frame.to_ndarray()
+                    if arr.ndim > 1:
+                        arr = np.mean(arr, axis=0)
+                    frames.append(arr)
+                container.close()
+                audio_data = np.concatenate(frames).astype(np.float32)
+                sample_rate = stream.rate
+            else:
+                audio_data, sample_rate = sf.read(str(path))
+                if audio_data.ndim > 1:
+                    audio_data = np.mean(audio_data, axis=1)
+
+            if len(audio_data) == 0:
+                raise ValueError("Аудіофайл порожній або пошкоджений")
+
+            max_val = float(np.max(np.abs(audio_data)))
+            if max_val > 1.0:
+                audio_data = audio_data / max_val
+
+            max_samples = int(sample_rate * 15)
+            if len(audio_data) > max_samples:
+                audio_data = audio_data[:max_samples]
 
             audio_payload = {
                 "raw": audio_data.astype(np.float32),

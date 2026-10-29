@@ -33,10 +33,10 @@ def health_check() -> Dict[str, str]:
 @app.post("/predict/image")
 async def predict_image(file: UploadFile = File(...)) -> Dict[str, Any]:
     if not file.filename:
-        raise HTTPException(status_code=400, detail="Файл не надано.")
+        raise HTTPException(status_code=400, detail="Файл не надано")
     suffix = Path(file.filename).suffix.lower()
     if suffix not in [".jpg", ".jpeg", ".png"]:
-        raise HTTPException(status_code=400, detail="Непідтримуваний формат зображення.")
+        raise HTTPException(status_code=400, detail="Непідтримуваний формат зображення")
 
     raw_bytes = await file.read()
     try:
@@ -54,10 +54,10 @@ async def predict_image(file: UploadFile = File(...)) -> Dict[str, Any]:
 @app.post("/predict/audio")
 async def predict_audio(file: UploadFile = File(...)) -> Dict[str, Any]:
     if not file.filename:
-        raise HTTPException(status_code=400, detail="Аудіофайл не надано.")
+        raise HTTPException(status_code=400, detail="Аудіофайл не надано")
     suffix = Path(file.filename).suffix.lower()
-    if suffix not in [".wav", ".flac", ".ogg"]:
-        raise HTTPException(status_code=400, detail="Непідтримуваний аудіоформат.")
+    if suffix not in [".wav", ".flac", ".ogg", ".mp3", ".m4a", ".aac"]:
+        raise HTTPException(status_code=400, detail="Непідтримуваний аудіоформат")
 
     with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as temp_file:
         shutil.copyfileobj(file.file, temp_file)
