@@ -5,7 +5,7 @@ import soundfile as sf
 import av
 import io
 from transformers import pipeline
-import config
+from . import config
 
 class BirdAudioClassifier:
     def __init__(self, model_id: str = config.AUDIO_MODEL_ID):

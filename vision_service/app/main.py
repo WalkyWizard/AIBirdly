@@ -4,9 +4,8 @@ from typing import Dict, Any
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
-import config
-from image_classifier import BirdImageClassifier
-from bird_info import BirdInfoRepository
+from .image_classifier import BirdImageClassifier
+from .bird_info import BirdInfoRepository
 
 app = FastAPI(title="Bird Vision Classification Microservice")
 
@@ -45,7 +44,3 @@ async def predict_image(file: UploadFile = File(...)) -> Dict[str, Any]:
         info = info_repo.find_bird_info(result["predicted_species"])
         result["bird_info"] = info
     return result
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("services.vision_service:app", host=config.AI_VISION_HOST, port=config.AI_VISION_PORT, reload=False)

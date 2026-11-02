@@ -1,8 +1,8 @@
 services:
   vision:
     build:
-      context: .
-      dockerfile: Dockerfile.vision
+      context: vision_service
+      dockerfile: Dockerfile
     container_name: ai-vision
     ports:
       - "8001:8001"
@@ -12,8 +12,8 @@ services:
 
   audio:
     build:
-      context: .
-      dockerfile: Dockerfile.audio
+      context: audio_service
+      dockerfile: Dockerfile
     container_name: ai-audio
     ports:
       - "8002:8002"
@@ -23,8 +23,8 @@ services:
 
   info:
     build:
-      context: .
-      dockerfile: Dockerfile.info
+      context: info_service
+      dockerfile: Dockerfile
     container_name: ai-info
     ports:
       - "8003:8003"

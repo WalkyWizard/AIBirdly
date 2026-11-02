@@ -2,7 +2,7 @@ from pathlib import Path
 from typing import List, Dict, Any, Union
 from PIL import Image
 from transformers import pipeline
-import config
+from . import config
 
 class BirdImageClassifier:
     def __init__(self, model_id: str = config.IMAGE_MODEL_ID):

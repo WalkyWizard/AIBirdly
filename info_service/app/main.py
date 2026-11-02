@@ -1,9 +1,8 @@
 from typing import Dict, Any
 from fastapi import FastAPI, Form
 from fastapi.middleware.cors import CORSMiddleware
-import config
-from bird_info import BirdInfoRepository
-from comparison import compare_modalities, compare_two_birds
+from .bird_info import BirdInfoRepository
+from .comparison import compare_modalities, compare_two_birds
 
 app = FastAPI(title="Bird Taxonomy and Comparison Microservice")
 
@@ -59,7 +58,3 @@ def compare_species_endpoint(
     b1 = info_repo.find_bird_info(species_a)
     b2 = info_repo.find_bird_info(species_b)
     return compare_two_birds(b1, b2)
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("services.info_service:app", host=config.AI_INFO_HOST, port=config.AI_INFO_PORT, reload=False)

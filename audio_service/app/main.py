@@ -4,9 +4,8 @@ from pathlib import Path
 from typing import Dict, Any
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-import config
-from audio_classifier import BirdAudioClassifier
-from bird_info import BirdInfoRepository
+from .audio_classifier import BirdAudioClassifier
+from .bird_info import BirdInfoRepository
 
 app = FastAPI(title="Bird Audio Classification Microservice")
 
@@ -47,7 +46,3 @@ async def predict_audio(file: UploadFile = File(...)) -> Dict[str, Any]:
     finally:
         if temp_path.exists():
             temp_path.unlink()
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("services.audio_service:app", host=config.AI_AUDIO_HOST, port=config.AI_AUDIO_PORT, reload=False)
