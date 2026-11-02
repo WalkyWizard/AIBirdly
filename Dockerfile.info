@@ -1,0 +1,16 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY config.py .
+COPY bird_info.py .
+COPY comparison.py .
+COPY services/__init__.py services/__init__.py
+COPY services/info_service.py services/info_service.py
+
+EXPOSE 8003
+
+CMD ["python", "-m", "uvicorn", "services.info_service:app", "--host", "0.0.0.0", "--port", "8003"]
