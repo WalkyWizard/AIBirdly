@@ -1,26 +1,27 @@
-import sys
-from pathlib import Path
+import asyncio
+import uvicorn
 import config
-from sample_loader import prepare_all_samples
+from services.vision_service import app as vision_app
+from services.audio_service import app as audio_app
+from services.info_service import app as info_app
 
-def main():
-    if not config.SAMPLE_DIR.exists() or not list(config.SAMPLE_DIR.glob("*.jpg")):
-        prepare_all_samples()
+app = vision_app
 
-    if len(sys.argv) > 1 and sys.argv[1] in ["--batch", "--test"]:
-        from batch_runner import BatchRunner
-        runner = BatchRunner()
-        summary = runner.run_full_pipeline()
-        print("Пакетний аналіз успішно завершено")
-        print(f"Кількість записів у базі даних: {summary['total_records']}")
-        print(f"CSV збережено у: {summary['csv_path']}")
-        print(f"Графік збережено у: {summary['chart_path']}")
-        print(f"Найчастіші види: {summary['stats']['most_frequent_species']}")
-        return
+async def serve_all():
+    c_vision = uvicorn.Config(vision_app, host=config.AI_VISION_HOST, port=config.AI_VISION_PORT, log_level="info")
+    s_vision = uvicorn.Server(c_vision)
 
-    from cli import BirdLabCLI
-    app = BirdLabCLI()
-    app.run()
+    c_audio = uvicorn.Config(audio_app, host=config.AI_AUDIO_HOST, port=config.AI_AUDIO_PORT, log_level="info")
+    s_audio = uvicorn.Server(c_audio)
+
+    c_info = uvicorn.Config(info_app, host=config.AI_INFO_HOST, port=config.AI_INFO_PORT, log_level="info")
+    s_info = uvicorn.Server(c_info)
+
+    await asyncio.gather(
+        s_vision.serve(),
+        s_audio.serve(),
+        s_info.serve()
+    )
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(serve_all())
