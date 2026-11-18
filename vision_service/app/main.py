@@ -41,6 +41,9 @@ async def predict_image(file: UploadFile = File(...)) -> Dict[str, Any]:
     result = classifier.classify(pil_image)
     result["file_name"] = file.filename
     if result.get("success"):
-        info = info_repo.find_bird_info(result["predicted_species"])
-        result["bird_info"] = info
+        if result.get("is_bird", True) and result.get("predicted_species") != "Нічого не знайдено":
+            info = info_repo.find_bird_info(result["predicted_species"])
+            result["bird_info"] = info
+        else:
+            result["bird_info"] = None
     return result

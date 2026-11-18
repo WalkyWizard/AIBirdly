@@ -1,5 +1,6 @@
 from pathlib import Path
 from typing import List, Dict, Any, Union
+import numpy as np
 from PIL import Image
 from transformers import pipeline
 from . import config
@@ -47,8 +48,25 @@ class BirdImageClassifier:
                 })
 
             top_variant = formatted_results[0]
+            clean_species = top_variant["species"].strip().upper()
+            is_non_bird_label = any(nb in clean_species for nb in ["LOONEY BIRD", "UNKNOWN", "CARTOON"])
+            is_bird = not is_non_bird_label and top_variant["confidence"] >= 0.20
+
+            if not is_bird:
+                return {
+                    "success": True,
+                    "is_bird": False,
+                    "file_name": file_name,
+                    "predicted_species": "Нічого не знайдено",
+                    "confidence": 0.0,
+                    "variants": [],
+                    "is_confident": False,
+                    "error": None
+                }
+
             return {
                 "success": True,
+                "is_bird": True,
                 "file_name": file_name,
                 "predicted_species": top_variant["species"],
                 "confidence": top_variant["confidence"],
@@ -59,6 +77,7 @@ class BirdImageClassifier:
         except Exception as e:
             return {
                 "success": False,
+                "is_bird": False,
                 "file_name": file_name,
                 "predicted_species": "Помилка аналізу",
                 "confidence": 0.0,
